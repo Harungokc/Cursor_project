@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemma AI Eğitim Koçu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 Gemma AI Eğitim Koçu</h1>
+            <p class="description">
+                Test sonuçlarınızı girin ve kişiselleştirilmiş eğitim koçluğu geri bildirimi alın.
+                Bu uygulama, lokal olarak çalışan Gemma 2B modeli ile güçlendirilmiştir.
+            </p>
+        </header>
+
+        <main>
+            <section class="test-section">
+                <h2>Test Sonuçlarınız</h2>
+                <p class="info-text">Her soru için doğru veya yanlış seçeneğini işaretleyin:</p>
+                <div id="test-form-container"></div>
+            </section>
+
+            <div class="action-section">
+                <button id="analyze-button" class="action-button">
+                    🤖 Gemma ile Analiz Et
+                </button>
+            </div>
+
+            <section class="results-section">
+                <div id="results-container"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Hackathon MVP - Ollama & Gemma 2B ile güçlendirilmiştir</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+/* Genel Reset ve Temel Stiller */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Header Stilleri */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.description {
+    font-size: 1.1em;
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Main Content */
+main {
+    padding: 30px;
+}
+
+.test-section {
+    margin-bottom: 30px;
+}
+
+.test-section h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.info-text {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 1.05em;
+}
+
+/* Soru Satırları */
+#test-form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.question-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8f9fa;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    transition: all 0.3s ease;
+}
+
+.question-row:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.question-label {
+    font-weight: 500;
+    color: #333;
+    flex: 1;
+}
+
+.question-number {
+    color: #667eea;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: #28a745;
+}
+
+.radio-option label {
+    cursor: pointer;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Action Section */
+.action-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.action-button {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.4);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.action-button:hover {
+    background: linear-gradient(135deg, #218838 0%, #1aa179 100%);
+    box-shadow: 0 12px 30px rgba(40, 167, 69, 0.6);
+    transform: translateY(-2px);
+}
+
+.action-button:active {
+    transform: translateY(0);
+}
+
+.action-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Results Section */
+.results-section {
+    margin-top: 30px;
+}
+
+#results-container {
+    min-height: 50px;
+}
+
+/* LLM Feedback Box */
+.llm-feedback-box {
+    background: #f0fff4;
+    border-left: 6px solid #28a745;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease;
+}
+
+.llm-feedback-box h3 {
+    color: #28a745;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.llm-feedback-box h3::before {
+    content: "🤖";
+}
+
+.llm-feedback-box p {
+    color: #333;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    font-size: 1.05em;
+}
+
+/* Hata Mesajları */
+.weak {
+    background: #fff5f5;
+    border-left: 6px solid #dc3545;
+    border-radius: 8px;
+    padding: 20px;
+    color: #721c24;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.2);
+    animation: fadeIn 0.5s ease;
+}
+
+.weak h3 {
+    color: #dc3545;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.weak h3::before {
+    content: "⚠️";
+}
+
+.weak p {
+    line-height: 1.6;
+}
+
+/* Loading Animation */
+.loading {
+    text-align: center;
+    padding: 30px;
+    color: #667eea;
+    font-size: 1.2em;
+}
+
+.loading::after {
+    content: "...";
+    animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: "."; }
+    40% { content: ".."; }
+    60%, 100% { content: "..."; }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    background: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    border-top: 1px solid #e9ecef;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .question-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .radio-group {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .action-button {
+        padding: 14px 30px;
+        font-size: 1em;
+    }
+}
