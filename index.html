@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemma AI Eğitim Koçu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 Gemma AI Eğitim Koçu</h1>
+            <p class="description">
+                Çoklu ders ve test desteği ile kişiselleştirilmiş eğitim koçluğu geri bildirimi alın.
+                İlerlemenizi takip edin ve Gemma AI ile başarıya ulaşın!
+            </p>
+        </header>
+
+        <main>
+            <!-- Ders ve Test Seçimi -->
+            <section class="selection-section">
+                <h2>📚 Ders ve Test Seçimi</h2>
+                <div class="selection-controls">
+                    <div class="select-group">
+                        <label for="subject-select">
+                            <span class="select-icon">📖</span>
+                            Ders Seçin:
+                        </label>
+                        <select id="subject-select" class="custom-select">
+                            <option value="">-- Ders Seçin --</option>
+                        </select>
+                    </div>
+                    
+                    <div class="select-group">
+                        <label for="test-select">
+                            <span class="select-icon">📝</span>
+                            Test Seçin:
+                        </label>
+                        <select id="test-select" class="custom-select" disabled>
+                            <option value="">-- Önce Ders Seçin --</option>
+                        </select>
+                    </div>
+                    
+                    <button id="load-test-button" class="load-button" disabled>
+                        ✅ Testi Yükle
+                    </button>
+                </div>
+                
+                <!-- İlerleme Bilgisi -->
+                <div id="progress-info" class="progress-info" style="display: none;"></div>
+            </section>
+
+            <!-- Test Formu -->
+            <section class="test-section" id="test-section" style="display: none;">
+                <h2 id="test-title">Test Sonuçlarınız</h2>
+                <p class="info-text">Her soru için doğru veya yanlış seçeneğini işaretleyin:</p>
+                <div id="test-form-container"></div>
+            </section>
+
+            <!-- Analiz Butonu -->
+            <div class="action-section" id="action-section" style="display: none;">
+                <button id="analyze-button" class="action-button">
+                    🤖 Gemma ile Analiz Et
+                </button>
+            </div>
+
+            <!-- Sonuçlar -->
+            <section class="results-section">
+                <div id="results-container"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Hackathon MVP - Ollama & Gemma 3N ile güçlendirilmiştir | İlerleme Takibi Aktif</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
